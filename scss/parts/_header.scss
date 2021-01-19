@@ -1,0 +1,101 @@
+@import './vars';
+
+.header {
+    height: 35vh;
+    padding-top: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: $very-pale-blue;
+    transition: all .2s ease-in-out;
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            color: $desaturated-blue;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .title-box {
+
+            h1 {
+                margin-bottom: 5px;
+                letter-spacing: 1px;
+            }
+
+        }
+
+        .switcher-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            p {
+                margin-right: 10px;
+            }
+
+            .theme-switcher {
+                width: 40px;
+                height: 20px;
+                border-radius: 30px;
+                border: none;
+                background-color: $toggle;
+                position: relative;
+                cursor: pointer;
+
+                span {
+                    position: absolute;
+                    top: 50%;
+                    left: 20px;
+                    transform: translateY(-50%);
+                    width: 18px;
+                    height: 18px;
+                    border-radius: 50%;
+                    background-color: $very-pale-blue;
+                    transition: all .2s ease-in-out;
+
+                    &.active {
+                        left: 2px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__dark {
+        background-color: $very-dark-blue;
+
+        .navbar {
+            .title-box {
+                h1 {
+                    color: $white;
+                }
+            }
+
+            .switcher-box {
+                .theme-switcher {
+                    background: linear-gradient(90deg, hsl(210, 78%, 56%),  hsl(146, 68%, 55%) 50%);
+
+                    span {
+                        background-color: $very-dark-blue;
+                    }
+                }
+            }
+        }
+    }
+
+    &__light {
+        background-color: $very-pale-blue;
+
+        .navbar {
+            .title-box {
+                h1 {
+                    color: $dark-blue;
+                }    
+            }
+        }
+    }
+}

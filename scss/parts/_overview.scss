@@ -1,0 +1,10 @@
+@import './vars';
+
+.overview-title {
+    font-size: 20px;
+    transform: translateY(-50px);
+
+    &__dark {
+        color: $white;
+    }
+}

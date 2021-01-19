@@ -1,0 +1,123 @@
+%generic-after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+
+    .card {
+        background-color: $light-grayish-blue;
+        border-radius: 5px;
+        padding: 40px 50px 20px 50px;
+        position: relative;
+        overflow: hidden;
+        transition: all .2s ease-in-out;
+
+        &::after {
+            @extend %generic-after;
+        }
+
+        &__fb::after {
+            @extend %generic-after;
+            background-color: $facebook;
+        }
+        
+        &__tw::after {
+            @extend %generic-after;
+            background-color: $twitter;
+        }
+
+        &__ig::after {
+            @extend %generic-after;
+            background: $instagram;
+        }
+
+        &__yt::after {
+            @extend %generic-after;
+            background-color: $youTube;
+        }
+
+        .card-head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                object-fit: cover;
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $dark-grayish-blue;
+                font-weight: 700;
+            }
+        }
+
+        .card-body {
+            margin-top: 20px;
+            text-align: center;
+
+            p {
+                &:first-child {
+                    font-size: 52px;
+                    font-weight: 700;
+                }
+
+                &:last-child {
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    color: $dark-grayish-blue;
+                    letter-spacing: 2.5px;
+                }
+            }
+        }
+
+        .card-footer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                object-fit: cover;
+                margin-right: 5px;
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 700;
+                color: $lime-green;
+            }
+
+            &__yt {
+                p {
+                    color: $brigh-red;
+                }
+            }
+        }
+
+        &__dark {
+            background-color: $dark-desaturated-blue;
+
+            .card-body {
+                p {
+                    &:first-child {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
