@@ -136,7 +136,7 @@
 
 @include for-tablet-lg {
     .stats {
-        transform: translateY(-200px);
+        transform: translateY(-150px);
         padding: 20px;
         justify-content: space-around;
 
@@ -162,7 +162,7 @@
 
 @include for-phone {
     .stats {
-        transform: translateY(-180px);
+        transform: translateY(-100px);
         justify-content: center;
         padding: 20px;
 
