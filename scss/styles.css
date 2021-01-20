@@ -44,6 +44,14 @@
           align-items: center;
 }
 
+.header .navbar .separator {
+  width: 80%;
+  height: 1px;
+  margin: 10px 0px;
+  background-color: #252a41;
+  display: none;
+}
+
 .header .navbar p {
   color: #8b97c6;
   font-weight: 700;
@@ -124,6 +132,35 @@
   color: #1e202a;
 }
 
+@media (min-width: 1400px) {
+  .header {
+    height: 25vh;
+  }
+}
+
+@media (max-width: 750px) {
+  .navbar {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 450px) {
+  .navbar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .navbar .title-box {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #63687e;
+  }
+  .navbar .switcher-box {
+    padding: 10px 30px;
+    width: 100%;
+  }
+}
+
 .stats .card::after, .stats .card__fb::after, .stats .card__tw::after, .stats .card__ig::after, .stats .card__yt::after {
   content: '';
   position: absolute;
@@ -144,6 +181,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -156,6 +195,10 @@
   overflow: hidden;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+
+.stats .card:hover {
+  background-color: #e5e8f6;
 }
 
 .stats .card__fb::after {
@@ -251,17 +294,154 @@
   background-color: #252a41;
 }
 
+.stats .card__dark:hover {
+  background-color: #2e3552;
+}
+
 .stats .card__dark .card-body p:first-child {
   color: white;
+}
+
+@media (max-width: 750px) {
+  .stats {
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px;
+  }
+  .stats .card {
+    width: 100%;
+    margin-top: 10px;
+  }
 }
 
 .overview-title {
   font-size: 20px;
   -webkit-transform: translateY(-50px);
           transform: translateY(-50px);
+  color: #63687e;
 }
 
 .overview-title__dark {
   color: white;
+}
+
+.overview {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.overview .view-card {
+  background-color: #f0f2fa;
+  border-radius: 5px;
+  padding: 20px;
+  width: 23%;
+  margin-top: 20px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.overview .view-card:hover {
+  background-color: #e5e8f6;
+}
+
+.overview .view-card .view-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.overview .view-card .view-head img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 5px;
+}
+
+.overview .view-card .view-head p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #63687e;
+}
+
+.overview .view-card .view-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.overview .view-card .view-footer span {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.overview .view-card .view-footer small {
+  color: #1db489;
+  font-weight: 700;
+}
+
+.overview .view-card .view-footer small.danger {
+  color: #dc414c;
+}
+
+.overview__dark .view-card {
+  background-color: #252a41;
+}
+
+.overview__dark .view-card:hover {
+  background-color: #2e3552;
+}
+
+.overview__dark .view-card .view-footer span {
+  color: white;
+}
+
+@media (max-width: 750px) {
+  .overview-title {
+    padding: 0px 20px;
+  }
+  .overview {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px;
+  }
+  .overview .view-card {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

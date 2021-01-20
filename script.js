@@ -4,13 +4,13 @@ const body = document.querySelector('.body');
 const header = document.querySelector('.header');
 const cards = document.querySelectorAll('.card');
 const overviewTitle = document.querySelector('.overview-title');
+const overview = document.querySelector('.overview');
 
 switchBtn.addEventListener('click', () => {
     ball.classList.toggle('active');
 
     switchTheme();
 
-    // if ball is active = light theme else dark theme
 });
 
 function switchTheme() {
@@ -18,4 +18,5 @@ function switchTheme() {
     header.classList.toggle('header__dark');
     cards.forEach(card => card.classList.toggle('card__dark'));
     overviewTitle.classList.toggle('overview-title__dark');
+    overview.classList.toggle('overview__dark');
 }

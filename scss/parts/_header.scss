@@ -1,4 +1,5 @@
 @import './vars';
+@import './mixins';
 
 .header {
     height: 35vh;
@@ -12,6 +13,14 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .separator {
+            width: 80%;
+            height: 1px;
+            margin: 10px 0px;
+            background-color: $dark-desaturated-blue;
+            display: none;
+        }
 
         p {
             color: $desaturated-blue;
@@ -96,6 +105,34 @@
                     color: $dark-blue;
                 }    
             }
+        }
+    }
+}
+
+@include for-wider-screens {
+    .header {
+        height: 25vh;
+    }
+}
+
+@include for-tablet {
+    .navbar {
+        padding: 20px;
+    }
+}
+
+@include for-phone {
+    .navbar {
+        flex-direction: column;
+        
+        .title-box {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $dark-grayish-blue;
+        }
+        
+        .switcher-box {
+            padding: 10px 30px;
+            width: 100%;
         }
     }
 }
