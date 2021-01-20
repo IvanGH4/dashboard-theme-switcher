@@ -5,10 +5,17 @@
 }
 
 @mixin for-tablet {
-    @media(max-width: 750px) {
+    @media(max-width: 740px) {
         @content;
     }
 }
+
+@mixin for-tablet-lg {
+    @media(min-width: 740px) and (max-width: 930px) {
+        @content;
+    }
+}
+
 @mixin for-wider-screens {
     @media(min-width: 1400px) {
         @content;

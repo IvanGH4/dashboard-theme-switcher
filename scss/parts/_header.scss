@@ -115,6 +115,12 @@
     }
 }
 
+@include for-tablet-lg {
+    .header {
+        padding: 20px;
+    }
+}
+
 @include for-tablet {
     .navbar {
         padding: 20px;
@@ -126,12 +132,20 @@
         flex-direction: column;
         
         .title-box {
-            padding-bottom: 10px;
-            border-bottom: 1px solid $dark-grayish-blue;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            h1 {
+                font-size: 20px;
+            }
         }
         
         .switcher-box {
-            padding: 10px 30px;
+            padding: 10px 0px;
             width: 100%;
         }
     }

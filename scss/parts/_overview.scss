@@ -90,6 +90,22 @@
     }
 }
 
+@include for-tablet-lg {
+
+    .overview-title {
+        padding: 0px 40px;
+    }
+
+    .overview {
+        padding: 20px;
+        justify-content: space-around;
+
+        .view-card {
+            width: 45%;
+        }
+    }
+}
+
 @include for-tablet {
 
     .overview-title {
